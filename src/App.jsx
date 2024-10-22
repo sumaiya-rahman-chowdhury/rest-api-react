@@ -3,11 +3,10 @@ import useFetch from './hooks/useFetch'
 import ShowPost from './component/ShowPost'
 
 function App() {
-  const url = 'https://jsonplaceholder.typicode.com/posts?_limit=10'
-  const { post, setPost } = useFetch(url)
+  const { post, setPost } = useFetch()
   const [title, setTitle] = useState('')
   const [body, setBody] = useState('')
-
+  console.log(post)
   const addPosts = async (title, body) => {
     await fetch('https://jsonplaceholder.typicode.com/posts', {
       method: 'POST',
@@ -49,7 +48,7 @@ function App() {
         ></textarea>
         <button type="submit">Add Post</button>
       </form>
-      <ShowPost post={post} />
+      <ShowPost post={post} setPost ={setPost} />
     </div>
   )
 }
