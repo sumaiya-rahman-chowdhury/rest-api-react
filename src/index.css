@@ -1,0 +1,30 @@
+.post-box{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+}
+.post{
+  background-color: rgb(166, 166, 240);
+  padding: 10px;
+  width: 400px;
+  color: white;
+  text-transform: capitalize;
+}
+.delete-btn{
+  background-color: rgb(166, 55, 240);
+  padding: 10px 15px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+h2{
+  text-align: center;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: auto;
+}

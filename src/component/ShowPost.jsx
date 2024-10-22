@@ -7,9 +7,10 @@ export default function ShowPost({ post }) {
         <div>
             <div>
                 <h2>Posts</h2>
-                {post && post.length > 0 ? (
+              <div className="post-box">
+              {post && post.length > 0 ? (
                     post.map((item) => (
-                        <div key={item.id}>
+                        <div key={item.id} className='post'>
                             <h3>{item.title}</h3>
                             <p>{item.body}</p>
                             <div className="button">
@@ -18,8 +19,9 @@ export default function ShowPost({ post }) {
                         </div>
                     ))
                 ) : (
-                    <p>Loading or no posts available...</p>
+                    <p>Loading .........</p>
                 )}
+              </div>
             </div>
         </div>
     )

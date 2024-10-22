@@ -14,5 +14,5 @@ export default function useFetch(url) {
             })
     }, [url])
 
-    return { post }
+    return { post,setPost }
 }
